@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Zoopla Scraper Input Configuration",
+  "type": "object",
+  "properties": {
+    "mode": {
+      "type": "string",
+      "description": "Scraping mode: property, agent, house_prices, or all",
+      "enum": ["property", "agent", "house_prices", "all"]
+    },
+    "property_urls": {
+      "type": "array",
+      "description": "List of Zoopla property listing URLs to scrape",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "agent_urls": {
+      "type": "array",
+      "description": "List of Zoopla agent directory URLs to scrape",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "house_price_urls": {
+      "type": "array",
+      "description": "List of Zoopla house price or sold price URLs to scrape",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "output_format": {
+      "type": "string",
+      "description": "Output format for extracted data",
+      "enum": ["json", "csv"]
+    },
+    "output_dir": {
+      "type": "string",
+      "description": "Directory where scraped data files will be written"
+    },
+    "max_items": {
+      "type": "integer",
+      "description": "Max number of items to scrape across all URLs (per extractor). Use 0 or omit for unlimited.",
+      "minimum": 0
+    },
+    "concurrency": {
+      "type": "integer",
+      "description": "Number of concurrent HTTP requests",
+      "minimum": 1,
+      "default": 5
+    },
+    "use_proxies": {
+      "type": "boolean",
+      "description": "Enable HTTP proxy rotation"
+    },
+    "proxies": {
+      "type": "array",
+      "description": "List of proxy URLs (e.g. http://user:pass@host:port)",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "mode",
+    "property_urls",
+    "agent_urls",
+    "house_price_urls",
+    "output_format",
+    "output_dir",
+    "use_proxies",
+    "proxies"
+  ],
+  "additionalProperties": false
+}
