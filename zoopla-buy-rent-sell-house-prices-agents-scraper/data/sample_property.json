@@ -1,0 +1,34 @@
+[
+  {
+    "listingId": "69488533",
+    "title": "5 bed detached house for sale",
+    "price": 705000,
+    "currency": "GBP",
+    "address": "The Fairfax, Heyford Fields, Upper Heyford, Bicester OX25",
+    "property_type": "detached",
+    "category": "residential",
+    "num_bedrooms": 5,
+    "num_bathrooms": 3,
+    "num_reception_rooms": 2,
+    "tenure": "freehold",
+    "agent_name": "Savills - Summertown New Homes",
+    "agent_phone": "01865 680232",
+    "images": [
+      "https://lc.zoocdn.com/901906e1b0e6338acd219ab3f3da036311448653.jpg",
+      "https://lc.zoocdn.com/7fc3dbbd9d9a3864bb85cda53a70a04ea6252845.jpg"
+    ],
+    "coordinates": {
+      "latitude": 51.92993,
+      "longitude": -1.265848
+    },
+    "price_history": {
+      "firstPublished": "2025-02-21T00:29:07",
+      "price": "£705,000"
+    },
+    "tags": [
+      "New home",
+      "Freehold"
+    ],
+    "agent_logo": "https://st.zoocdn.com/zoopla_static_agent_logo_(648969).png"
+  }
+]
